@@ -348,6 +348,146 @@
                 max-height: none;
             }
         }
+
+        /* DeepSeek 深度思考模块样式 */
+        .deepseek-container {
+            max-width: 1200px;
+            margin: 30px auto 40px;
+            padding: 0 20px;
+        }
+        
+        .deepseek-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .deepseek-logo {
+            height: 28px;
+            margin-right: 10px;
+        }
+        
+        .deepseek-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+        
+        .deepseek-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+        
+        .deepseek-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+            display: flex;
+            align-items: center;
+        }
+        
+        .deepseek-icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0071e3;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+        
+        .deepseek-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1d1d1f;
+        }
+        
+        .thinking-process {
+            background-color: #f9f9fb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0071e3;
+        }
+        
+        .thinking-step {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #e5e5e7;
+        }
+        
+        .thinking-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .result-highlight {
+            background-color: rgba(0, 113, 227, 0.08);
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+        }
+        
+        .result-highlight strong {
+            color: #0071e3;
+        }
+        
+        .confidence-meter {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .confidence-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 10px;
+            color: #6e6e73;
+        }
+        
+        .confidence-bar {
+            height: 8px;
+            width: 200px;
+            background-color: #e5e5e7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .confidence-level {
+            height: 100%;
+            width: 85%;
+            background-color: #0071e3;
+        }
+        
+        .confidence-value {
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 10px;
+            color: #0071e3;
+        }
+        
+        @media (max-width: 1000px) {
+            .deepseek-flex {
+                flex-direction: column;
+            }
+        }
+        
+        .deepseek-flex {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .deepseek-col {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -528,11 +668,74 @@
                 </div>
             </div>
         </div>
+
+        <!-- DeepSeek 深度思考模块 -->
+        <div class="deepseek-container">
+            <div class="deepseek-header">
+                <div class="deepseek-logo">🧠</div>
+                <h2 class="deepseek-title">DeepSeek 深度思考</h2>
+            </div>
+            
+            <div class="deepseek-flex">
+                <div class="deepseek-col">
+                    <div class="deepseek-card">
+                        <div class="deepseek-section-title">
+                            <span class="deepseek-icon">🔍</span>思考过程
+                        </div>
+                        <div class="deepseek-content">
+                            <div class="thinking-process">
+                                <div class="thinking-step">
+                                    <strong>步骤1：文献分析</strong>
+                                    <p>分析糖尿病肾病的最新诊断标准，包括2023年KDIGO指南更新和中国糖尿病协会指南，着重关注微量白蛋白尿和GFR异常两个早期诊断指标。</p>
+                                </div>
+                                <div class="thinking-step">
+                                    <strong>步骤2：早期诊断关键指标评估</strong>
+                                    <p>评估UACR、eGFR在早期诊断中的特异性和敏感性。分析研究表明，UACR 30-300mg/g是目前公认的早期诊断标准，但约40%患者可能出现正常白蛋白尿的肾功能下降。</p>
+                                </div>
+                                <div class="thinking-step">
+                                    <strong>步骤3：新型生物标志物探索</strong>
+                                    <p>分析新型肾脏损伤生物标志物如KIM-1、NGAL和MCP-1在早期诊断中的潜在价值，这些标志物可能在微量白蛋白尿出现前检测到肾损伤。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deepseek-col">
+                    <div class="deepseek-card">
+                        <div class="deepseek-section-title">
+                            <span class="deepseek-icon">💡</span>思考结果
+                        </div>
+                        <div class="deepseek-content">
+                            <div class="result-highlight">
+                                <strong>综合分析：</strong>糖尿病肾病早期诊断应采用多指标评估策略，单一指标可能导致漏诊。建议结合UACR、eGFR和新型生物标志物进行综合评估。
+                            </div>
+                            
+                            <p>基于现有证据，糖尿病肾病早期诊断的最佳实践包括：</p>
+                            <ul>
+                                <li>每年定期筛查微量白蛋白尿和eGFR变化</li>
+                                <li>对高危患者（如长期糖尿病史、血糖控制不佳、高血压）增加筛查频率至每6个月一次</li>
+                                <li>考虑使用新型肾脏损伤标志物进行辅助诊断</li>
+                                <li>早期引入SGLT-2抑制剂可能具有肾脏保护作用</li>
+                            </ul>
+                            
+                            <div class="confidence-meter">
+                                <span class="confidence-label">结论可信度：</span>
+                                <div class="confidence-bar">
+                                    <div class="confidence-level"></div>
+                                </div>
+                                <span class="confidence-value">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 底部信息 -->
     <div class="footer">
-        © 2023 临床知识库 | 医疗辅助决策系统
+        © 2025 临床知识库 | 科技赋能 | powered by wangzk 
     </div>
 </body>
 </html>
